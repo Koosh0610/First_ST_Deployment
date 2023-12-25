@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/Koosh0610/Koosh0610
+RUN git clone https://github.com/Koosh0610/First_ST_Deployment
 RUN pip install --upgrade pip setuptools
 COPY requirements.txt /Koosh0610/requirements.txt
 RUN pip install -r requirements.txt
