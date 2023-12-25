@@ -4,6 +4,6 @@
         "builder": "NIXPACKS"
     },
     "deploy": {
-        "startCommand": "streamlit run st.py --server.address 0.0.0.0 --server.port=8501 --server.fileWatcherType none --browser.gatherUsageStats false"
+        "startCommand": "streamlit run https://github.com/Koosh0610/First_ST_Deployment/blob/main/st.py --server.address 0.0.0.0 --server.port=8501 --server.fileWatcherType none --browser.gatherUsageStats false"
     }
 }
