@@ -1,8 +1,8 @@
-# app/Dockerfile
+
 
 FROM python:3.10.8-slim
 
-WORKDIR /app
+WORKDIR /Koosh0610
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -11,12 +11,13 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/Koosh0610/First_ST_Deployment
-
-RUN pip3 install -r requirements.txt
+RUN git clone https://github.com/Koosh0610/Koosh0610
+RUN pip install --upgrade pip setuptools
+COPY requirements.txt /Koosh0610/requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 8501
 
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
-ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "st.py", "--server.port=8501", "--server.address=0.0.0.0"]
