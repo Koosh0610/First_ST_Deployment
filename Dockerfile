@@ -1,6 +1,6 @@
 
 
-FROM python:3.12.1-slim
+FROM python:3.10.8-slim
 
 WORKDIR /Koosh0610
 
